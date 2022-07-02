@@ -1,0 +1,193 @@
+/*********************************************************/
+/* Body */
+/*********************************************************/
+body {
+    color: #656371;
+    background-color: white;
+    font-family: Helvetica;
+    margin: 0;
+    top: 0;
+}
+
+/*********************************************************/
+/* Navigation Bar */
+/*********************************************************/
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    /* background-color: #3b6dd1; */
+    background-color: #456990;
+    z-index: 100;
+}
+
+#name {
+    padding: 0px 20px;
+}
+
+#name h1 {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+#links ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+#links li {
+    float: right;
+    border-right: 1px solid white;
+}
+
+#links li:first-child {
+    border-right: none;
+}
+
+#links li a {
+    text-align: center;
+    display: inline-block;
+    padding: 0px 20px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+#links a:hover {
+    background-color: white;
+    color: #456990;
+}
+
+/*********************************************************/
+/* About Section */
+/*********************************************************/
+.about {
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+    height: 500px;
+    max-width: 100%;
+    background-color: #F45B69;
+}
+
+#about-text {
+    background-color: #456990;
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    margin-left: 200px;
+    margin-top: 75px;
+    box-shadow: 0px 0px 20px black;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#about-text h1 {
+    color: white;
+    text-decoration: underline;
+}
+
+#about-text p {
+    color: white;
+    padding: 0px 10px;
+}
+
+#about-image img {
+    max-width: 100%;
+    max-height: 500px;
+    float: right;
+}
+
+/*********************************************************/
+/* Spacer Div */
+/*********************************************************/
+.spacer {
+    position: relative;
+    clear: both;
+    height: 10px;
+    width: 100%;
+    background-color: #E4FDE1;
+}
+
+/*********************************************************/
+/* Buffalo Section */
+/*********************************************************/
+.buffalo {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url("../images/niagara.jpg");
+    background-size: cover;
+    margin: 0px;
+}
+
+.buffalo-text {
+    display: inline-block;
+    background-image: linear-gradient(to right, rgba(69, 105, 144, 1), rgba(255,0,0,0));
+    margin-right: 20px;
+    height: 300px;
+    width: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+
+.text-area {
+    float: left;
+    width: 300px;
+    font-family: sans-serif;
+}
+
+/*********************************************************/
+/* Berkeley Section */
+/*********************************************************/
+.berkeley {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url("../images/campanile_scape.jpeg");
+    background-size: cover;
+    background-position: 100% 45%;
+    margin: 0px;
+}
+
+.berkeley-text {
+    display: inline-block;
+    background-image: linear-gradient(to right, rgba(69, 105, 144, 1), rgba(255,0,0,0));
+    height: 300px;
+    width: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    font-family: sans-serif;
+}
+
+/*********************************************************/
+/* Ithaca Section */
+/*********************************************************/
+.ithaca {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url("../images/ithaca_tree.jpeg");
+    background-size: cover;
+    background-position: 100% 75%;
+    margin: 0px;
+}
+
+.ithaca-text {
+    display: inline-block;
+    background-image: linear-gradient(to right, rgba(69, 105, 144, 1), rgba(255,0,0,0));
+    height: 300px;
+    width: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    font-family: sans-serif;
+}

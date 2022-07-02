@@ -1,0 +1,78 @@
+/*********************************************************/
+/* Body */
+/*********************************************************/
+body {
+    background-color: white;
+    font-family: Helvetica; 
+    margin: 0;
+    top: 0;
+}
+
+/*********************************************************/
+/* Navigation Bar */
+/*********************************************************/
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    /* background-color: #3b6dd1; */
+    background-color: #456990;
+    z-index: 100;
+}
+
+#name {
+    padding: 0px 20px;
+}
+
+#name h1 {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+#links ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+#links li {
+    float: right;
+    border-right: 1px solid white;
+}
+
+#links li:first-child {
+    border-right: none;
+}
+
+#links li a {
+    text-align: center;
+    display: inline-block;
+    padding: 0px 20px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+#links a:hover {
+    background-color: white;
+    color: #456990;
+}
+
+/*********************************************************/
+/* Photo Gallery */
+/*********************************************************/
+.row {
+    display: flex;
+    margin-top: 70px;
+}
+
+.column {
+    flex: 33.33%;
+    padding: 5px;
+    text-align: center;
+}
