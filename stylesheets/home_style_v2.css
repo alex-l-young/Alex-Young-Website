@@ -80,7 +80,7 @@ body {
     background-color: #456990;
     position: absolute;
     height: 200px;
-    width: 350px;
+    width: auto;
     margin-left: 200px;
     margin-top: 75px;
     box-shadow: 0px 0px 20px black;
@@ -101,7 +101,7 @@ body {
 #about-image img {
     max-width: 100%;
     max-height: 500px;
-    float: right;
+    float: center;
 }
 
 /*********************************************************/

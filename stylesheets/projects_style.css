@@ -77,8 +77,8 @@ body {
 .row {
     display: flex;
     margin-top: 70px;
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .column {
