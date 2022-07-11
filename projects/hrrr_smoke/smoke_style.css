@@ -3,7 +3,7 @@
 /*********************************************************/
 body {
     background-color: white;
-    font-family: Helvetica; 
+    font-family: Helvetica;
     margin: 0;
     top: 0;
 }
@@ -61,4 +61,42 @@ body {
 #links a:hover {
     background-color: white;
     color: #456990;
+}
+
+/*********************************************************/
+/* Content */
+/*********************************************************/
+.title {
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+    height: 50px;
+    max-width: 100%;
+}
+
+.header-img {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    height: 500px;
+    max-width: 100%;
+    margin: auto 0;
+}
+
+img {
+    height: 100%;
+    width: auto;
+}
+
+.text-container {
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 0px;
+    height: 100px;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+#paper-link {
+    color: blue;
 }

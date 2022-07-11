@@ -74,6 +74,20 @@ body {
     max-width: 100%;
 }
 
+.header-img {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    height: 500px;
+    max-width: 100%;
+    margin: auto 0;
+}
+
+img {
+    height: 100%;
+    width: auto;
+}
+
 .text-container {
     text-align: justify;
     text-justify: inter-word;
@@ -83,15 +97,6 @@ body {
     margin: 0 auto;
 }
 
-.row {
-    display: flex;
-    margin-top: 20px;
-    padding-left: 300px;
-    padding-right: 300px;
-}
-
-.column {
-    flex: 33.33%;
-    padding: 20px;
-    text-align: center;
+#paper-link {
+    color: blue;
 }

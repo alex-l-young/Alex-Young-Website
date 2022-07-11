@@ -74,24 +74,15 @@ body {
     max-width: 100%;
 }
 
-.text-container {
-    text-align: justify;
-    text-justify: inter-word;
-    margin-top: 0px;
-    height: 100px;
-    max-width: 50%;
-    margin: 0 auto;
-}
-
 .row {
     display: flex;
-    margin-top: 20px;
-    padding-left: 300px;
-    padding-right: 300px;
+    margin-top: 70px;
+    padding-left: 200px;
+    padding-right: 200px;
 }
 
 .column {
     flex: 33.33%;
-    padding: 20px;
+    padding: 50px;
     text-align: center;
 }
