@@ -74,15 +74,27 @@ body {
     max-width: 100%;
 }
 
-.row {
-    display: flex;
-    margin-top: 20px;
-    padding-left: 0px;
-    padding-right: 0px;
+#simulation {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 50px;
+    height: 100px;
 }
 
-.column {
-    flex: 33.33%;
-    padding: 50px;
-    text-align: center;
+img {
+    height: 100%;
+    width: auto;
+}
+
+.text-container {
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 0px;
+    height: 100px;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+#paper-link {
+    color: blue;
 }
