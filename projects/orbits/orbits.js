@@ -32,7 +32,7 @@ function setup() {
   sunCenter = createVector(canvasX / 2, canvasY / 2);
   sunRadius = canvasX * 0.05;
 
-  G = 10;
+  G = 20;
 
   mx = [0, 0, 0, 0, 0];
   my = [0, 0, 0, 0, 0];
@@ -59,7 +59,8 @@ function draw() {
   sun.createSun();
 
   for (i = 0; i < heldPlanets.length; i++) {
-    heldPlanets[i].moveWithMouse();
+    heldPlanets[i].initVelocity();
+    drawInitVelocityVector(heldPlanets[i])
   }
 
   for (i = 0; i < planets.length; i++) {
@@ -89,7 +90,7 @@ function mousePressed() {
 
 function mouseReleased() {
   if (heldPlanets.length > 0) {
-    heldPlanets[0].vel = computeMouseVelocity();
+    heldPlanets[0].vel = heldPlanets[0].initVel;
     planets.push(heldPlanets[0]);
     heldPlanets = [];
   }
@@ -98,10 +99,12 @@ function mouseReleased() {
 let Planet = function() {
   this.dt = 1;
   this.pos = createVector(mouseX, mouseY);
+  this.initVel = createVector(0, 0);
+  this.velScale = 0.1;
   this.vel = createVector(0, 0);
   this.accel = createVector(0, 0);
   this.r = 15; // Fixed size for better visibility
-  this.initLifespan = 1000;
+  this.initLifespan = 10000;
   this.lifespan = this.initLifespan;
 }
 
@@ -111,17 +114,23 @@ Planet.prototype.createPlanet = function() {
   circle(this.pos.x,this.pos.y,this.r);
 }
 
-Planet.prototype.moveWithMouse = function() {
-  this.pos = createVector(mouseX, mouseY);
+Planet.prototype.initVelocity = function() {
+  let scaling = this.velScale;
+  this.initVel = createVector(mouseX, mouseY);
+  this.initVel.x = scaling * (this.pos.x - mouseX)
+  this.initVel.y = scaling * (this.pos.y - mouseY)
   this.displayPlanet();
 }
 
 Planet.prototype.updatePosition = function() {
   this.checkCollision();
   this.accel = acceleration(sunCenter, this.pos);
-
+  
+  let friction = 0.0005
+  
   let velX = this.vel.x + this.accel.x * this.dt;
   let velY = this.vel.y + this.accel.y * this.dt;
+
 
   let posX = this.pos.x + this.vel.x * this.dt;
   let posY = this.pos.y + this.vel.y * this.dt;
@@ -173,6 +182,16 @@ let acceleration = function(sunPosition, planetPosition) {
   accelX = Fg * (vX / vMag);
   accelY = Fg * (vY / vMag);
   return createVector(accelX, accelY);
+}
+
+let drawInitVelocityVector = function(planet) {
+  stroke('white')
+  let velScale = planet.velScale
+  let posX = planet.pos.x
+  let posY = planet.pos.y
+  let velX = planet.initVel.x
+  let velY = planet.initVel.y
+  line(posX, posY, posX + velX / velScale, posY + velY / velScale)
 }
 
 let computeMouseVelocity = function() {

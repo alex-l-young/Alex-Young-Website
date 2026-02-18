@@ -151,6 +151,35 @@ img {
     border-bottom: none !important; /* Remove the line separator if you want them to blend */
 }
 
+/* SOCIAL SIDEBAR */
+.hero-social {
+    display: flex;
+    flex-direction: column; /* Stack them: LinkedIn on top of GitHub */
+    justify-content: center; /* Center them vertically relative to the photo */
+    gap: 1rem;               /* Space between the two links */
+    padding-left: 2rem;
+    border-left: 1px solid var(--border);
+    flex-shrink: 0;
+}
+
+.hero-social a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;     /* Slight spacing for a clean look */
+    text-transform: uppercase;
+    transition: var(--transition);
+    
+    /* Removed vertical writing-mode */
+}
+
+.hero-social a:hover {
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--accent-glow);
+    transform: translateX(5px); /* Nudge right on hover instead of glow */
+}
+
 .container.no-top-gap {
     padding-top: 0 !important;
 }
@@ -163,6 +192,23 @@ img {
         flex-direction: column; /* Stack vertically on phone */
         text-align: center;
         gap: 2rem;
+    }
+
+    /* Add this inside the existing media query block */
+    .hero-social {
+        flex-direction: row;
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding-top: 1.5rem;
+        padding-left: 0;
+        width: 100%;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .hero-social a {
+        writing-mode: horizontal-tb; /* Resets text to horizontal */
+        transform: none;
     }
 
     .hero-image {

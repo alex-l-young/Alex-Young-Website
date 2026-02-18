@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Flood Forecasting | Alex Young</title>
+    <link href="../../stylesheets/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../../index.html">ALEX YOUNG<span>.</span></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../../index.html">About</a></li>
+            <li><a href="../../projects.html">Projects</a></li>
+            <li><a href="../../photography.html">Photography</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Real-Time Flood Forecasting</h1>
+            <p>Levee-breach flood forecasting with distributed sensors in the floodplain.</p>
+        </div>
+
+        <div class="project-content">
+            <img src="italy_flood.jpg" alt="Flood in Northern Italy" style="width: 100%; margin-bottom: 2rem;">
+
+            <p>
+                Levee-breach floods are difficult to prepare for because where and when a levee might 
+                breach is challenging to predict. 
+                Once a levee breaches, the flooding rapidly expands in the floodplain with little time for 
+                emergency response and evacuation. 
+                One solution is to install depth sensors in the floodplain close to the levees that continuously
+                monitor for flood waters at a known location. 
+                During a flood, the sensor readings can be used to calibrate a flood model in real time to 
+                provide emergency planners with the necessary information to guide their response. 
+            </p>
+            <p>
+                Our research focused on where to place sensors in the floodplain and how best to use that sensor
+                data to calibrate a high-resolution (~1-meter) flood model.
+                The goal was to issue accurate downstream forecasts of the flood with sufficient (>1 hour) lead time for 
+                emergency planning purposes.
+                Model calibration focused on the land surface roughness parameterization, as the influence of vegetation 
+                on the flood propagation can vary widely depending on the season.
+                Our results showed that floodplain sensors paired with automated parameter calibration could be a 
+                useful tool for municipalities that are in levee-protected floodplains.
+            </p>
+
+            <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024WR038424" 
+                class="btn-link"
+                target="_blank" 
+                rel="noopener noreferrer">
+                Read the Paper
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Alex Young.</p>
+    </footer>
+
+</body>
+</html>
