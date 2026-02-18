@@ -1,73 +1,89 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Alex Young</title>
-        <link href="ithaca_climate_style.css" type="text/css" rel="stylesheet">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ithaca Climate | Alex Young</title>
+    <link href="../../stylesheets/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
 
-    <body>
-        <div class=topnav>
-            <div id=name>
-                <h1>ALEX YOUNG</h1>
-            </div>
-            <div id=links>
-                <ul>
-                    <li><a href="../../photography.html">PHOTOGRAPHY</a></li>
-                    <li><a href="../../projects.html">PROJECTS</a></li>
-                    <li><a href="../../index.html">ABOUT</a></li>
-                </ul>
-            </div>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../../index.html">ALEX YOUNG<span>.</span></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../../index.html">About</a></li>
+            <li><a href="../../projects.html">Projects</a></li>
+            <li><a href="../../photography.html">Photography</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Ithaca, NY Climate</h1>
+            <p>Visualizing local weather patterns from Cornell University data.</p>
         </div>
 
-        <!--Main Content-->
-        <div class=title>
-            <h1>Ithaca, NY</h1>
-        </div>
-
-        <div class=text-container>
+        <div class="project-content">
             <p>
                 The city of Ithaca is located in Central New York at the southern
                 tip of Cayuga Lake. Somewhat moderated by the large body of water,
-                the local climate is generally cool year round, with only a few
-                overly sweaty days in the summer and bitingly cold winter snaps.
-                The plots below scratch the surface of Ithaca's weather and
-                come from data collected at the Cornell University weather station.
+                the local climate is generally cool year round. The plots below 
+                show historical trends for temperature, precipitation, and snowfall.
             </p>
         </div>
 
-        <!--Row 1-->
-        <div class=row>
-            <div class=column>
-                <img src="avg_daily_temp.png" alt="Average Daily Temperature" style="width:100%">
+        <div class="graph-grid">
+            
+            <div class="graph-card">
+                <img src="avg_daily_temp.png" alt="Average Daily Temperature">
+                <div class="card-content">
+                    <h2>Avg Daily Temp</h2>
+                </div>
             </div>
-            <div class=column>
-                <img src="daily_mean_max.png" alt="Daily Mean Maximum" style="width:100%">
-            </div>
-        </div>
 
-        <!--Row 2-->
-        <div class=row>
-            <div class=column>
-                <img src="avg_daily_prcp.png" alt="Average Daily Precip." style="width:100%">
-                <!-- <h2>Macro</h2> -->
+            <div class="graph-card">
+                <img src="daily_mean_max.png" alt="Daily Mean Maximum">
+                <div class="card-content">
+                    <h2>Daily Mean Max</h2>
+                </div>
             </div>
-            <div class=column>
-                <img src="avg_daily_snowfall.png" alt="Average Daily Snowfall" style="width:100%">
-                <!-- <h2>Macro</h2> -->
-            </div>
-        </div>
 
-        <!--Row 3-->
-        <div class=row>
-            <div class=column>
-                <img src="first_frost.png" alt="First Frost Date" style="width:100%">
-                <!-- <h2>Macro</h2> -->
+            <div class="graph-card">
+                <img src="avg_daily_prcp.png" alt="Average Daily Precip">
+                <div class="card-content">
+                    <h2>Avg Daily Precip</h2>
+                </div>
             </div>
-            <div class=column>
-                <img src="last_frost.png" alt="Last Frost Date" style="width:100%">
-                <!-- <h2>Macro</h2> -->
-            </div>
-        </div>
 
-    </body>
+            <div class="graph-card">
+                <img src="avg_daily_snowfall.png" alt="Average Daily Snowfall">
+                <div class="card-content">
+                    <h2>Avg Daily Snowfall</h2>
+                </div>
+            </div>
+
+            <div class="graph-card">
+                <img src="first_frost.png" alt="First Frost Date">
+                <div class="card-content">
+                    <h2>First Frost Date</h2>
+                </div>
+            </div>
+
+            <div class="graph-card">
+                <img src="last_frost.png" alt="Last Frost Date">
+                <div class="card-content">
+                    <h2>Last Frost Date</h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Alex Young.</p>
+    </footer>
+
+</body>
 </html>

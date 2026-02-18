@@ -1,67 +1,109 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Alex Young</title>
-        <link href="stylesheets/projects_style.css" type="text/css" rel="stylesheet">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Alex Young</title>
+    <link href="stylesheets/style.css" type="text/css" rel="stylesheet">
+    <style>
+        /* Local styling for section headers */
+        .section-header {
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #334155;
+            color: var(--text-main);
+            font-size: 1.8rem;
+        }
+        
+        /* Remove top margin for the first header */
+        .section-header:first-of-type {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
 
-    <body>
-        <div class=topnav>
-            <div id=name>
-                <h1>ALEX YOUNG</h1>
-            </div>
-            <div id=links>
-                <ul>
-                    <li><a href="photography.html">PHOTOGRAPHY</a></li>
-                    <li><a href="projects.html">PROJECTS</a></li>
-                    <li><a href="index.html">ABOUT</a></li>
-                </ul>
-            </div>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">ALEX YOUNG<span>.</span></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="photography.html">Photography</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Selected Work</h1>
+            <p>A collection of research, data visualization, and coding experiments.</p>
         </div>
 
-        <!--Main Content-->
-        <div class=title>
-            <h1>PROJECTS</h1>
+        <h2 class="section-header">Research</h2>
+        <div class="grid">
+            <a href="projects/hrrr_smoke/smoke.html" class="card">
+                <div class="card-image">
+                    <img src="projects/hrrr_smoke/smoke_paper_image.png" alt="Wildfire Smoke">
+                </div>
+                <div class="card-content">
+                    <h2>Wildfire Smoke</h2>
+                    <p>Validating NOAA HRRR-Smoke models using low-cost sensors during the 2018 Camp Fire.</p>
+                </div>
+            </a>
+
+            <a href="projects/pydrology/pydrology.html" class="card">
+                <div class="card-image">
+                    <img src="projects/pydrology/niagara_river.jpeg" alt="Pydrology">
+                </div>
+                <div class="card-content">
+                    <h2>Pydrology</h2>
+                    <p>An open-source Python library for fetching and processing USGS & NOAA hydrology data.</p>
+                </div>
+            </a>
         </div>
 
-        <div class=row>
-            <div class=column>
-                <a href="projects/ithaca_climate/ithaca_climate.html">
-                <img src="projects/ithaca_climate/avg_daily_temp.png" alt="Ithaca Average Temp" style="width:100%">
-                </a>
-                <h2>Ithaca, NY Climate</h2>
-            </div>
-            <div class=column>
-                <a href="projects/hrrr_smoke/smoke.html">
-                <img src="projects/hrrr_smoke/smoke_paper_image.png" alt="Smoke Plume Plots" style="width:100%">
-                </a>
-                <h2>Wildfire Smoke</h2>
-            </div>
-            <div class=column>
-                <a href="projects/pydrology/pydrology.html">
-                <img src="projects/pydrology/niagara_river.jpeg" alt="Smoke Plume Plots" style="width:100%">
-                </a>
-                <h2>Pydrology</h2>
-            </div>
+        <h2 class="section-header">Environmental Data Visualization</h2>
+        <div class="grid">
+            <a href="projects/ithaca_climate/ithaca_climate.html" class="card">
+                <div class="card-image">
+                    <img src="projects/ithaca_climate/ithaca_clouds.jpeg" alt="Ithaca Climate">
+                </div>
+                <div class="card-content">
+                    <h2>Ithaca, NY Climate</h2>
+                    <p>Visualizing historical temperature, precipitation, and frost trends in Central New York.</p>
+                </div>
+            </a>
         </div>
 
-        <div class=row>
-            <div class=column>
-                <a href="projects/Fluid_Sim/fluid_sim.html">
-                <img src="projects/Fluid_Sim/Ball_Bounce.png" alt="Bouncing Ball" style="width:100%">
-                </a>
-                <h2>Bouncy Balls</h2>
-            </div>
-            <div class=column>
-                <a href="projects/orbits/orbits.html">
-                <img src="projects/orbits/orbits.png" alt="Orbit image" style="width:100%">
-                </a>
-                <h2>Orbits</h2>
-            </div>
-            <div class=column>
+        <h2 class="section-header">Fun</h2>
+        <div class="grid">
+            <a href="projects/Fluid_Sim/fluid_sim.html" class="card">
+                <div class="card-image">
+                    <img src="projects/Fluid_Sim/Ball_Bounce.png" alt="Fluid Sim">
+                </div>
+                <div class="card-content">
+                    <h2>Bouncy Balls</h2>
+                    <p>Interactive simulation using p5.js.</p>
+                </div>
+            </a>
 
-            </div>
+             <a href="projects/orbits/orbits.html" class="card">
+                <div class="card-image">
+                    <img src="projects/orbits/orbits.png" alt="Orbits">
+                </div>
+                <div class="card-content">
+                    <h2>Orbital Mechanics</h2>
+                    <p>Visualizing gravitational forces and planetary orbits in the browser.</p>
+                </div>
+            </a>
         </div>
 
-    </body>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Alex Young.</p>
+    </footer>
+</body>
 </html>

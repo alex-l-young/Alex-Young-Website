@@ -1,86 +1,96 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Alex Young</title>
-        <link href="stylesheets/home_style_v2.css" type="text/css" rel="stylesheet">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Young | Hydrology & Engineering</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <link href="stylesheets/style.css" type="text/css" rel="stylesheet">
+</head>
+</head>
+<body>
 
-    <body>
-        <div class=topnav>
-            <div id=name>
-                <h1>ALEX YOUNG</h1>
-            </div>
-            <div id=links>
-                <ul>
-                    <li><a href="photography.html">PHOTOGRAPHY</a></li>
-                    <li><a href="projects.html">PROJECTS</a></li>
-                    <li><a href="index.html">ABOUT</a></li>
-                </ul>
-            </div>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">ALEX YOUNG<span>.</span></a>
         </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="photography.html">Photography</a></li>
+        </ul>
+    </nav>
 
-    <!--Main Content-->
-        <div class=about>
-            <!-- <div id=about-text>
-                <h1>About</h1>
-                <p>Welcome all to my website! Feel free to take a look through some
-                of my projects and photography.</p>
-            </div> -->
-            <div id=about-image>
-                <img src="images/alex.jpeg" alt="Photo of me">
+    <div class="container">
+        
+        <section class="hero no-bottom-gap">
+            <div class="hero-text">
+                <h1>Civil Engineer &<br>Hydrologist.</h1>
+                <p>I specialize in physical hydrology, flood modeling, and environmental data visualization. Currently based in the Twin Cities.</p>
             </div>
-        </div>
+            <div class="hero-image">
+                <img src="images/alex.jpeg" alt="Alex Young">
+            </div>
+        </section>
 
-        <!--Spacer-->
-        <div class=spacer></div>
-
-        <!--Ithaca-->
-        <div class=ithaca>
-            <div class=ithaca-text>
-                <div class=text-area>
-                    <h1 class=head-one>ITHACA, NY</h1>
-                    <p>I'm currently a graduate student at Cornell University
-                        in civil and environmental engineering. My work focuses
-                        on physical hydrology, especially flood interaction and
-                        land surface parameterization. Ask me about water!</p>
+        <div class="container no-top-gap" style="padding-bottom: 0;">
+            <div class="simulation-stage" style="height: auto; flex-direction: column; align-items: flex-start; max-width: 900px;">
+                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <div>
+                        <h2 style="margin: 0; font-size: 1.5rem; color: #f8fafc;">Fall Creek Current Conditions | Ithaca, NY</h2>
+                        <p style="margin: 0; font-size: 0.9rem; color: #94a3b8;">USGS 04234000 • Ithaca, NY • Past 7 Days</p>
+                    </div>
+                    <div id="latest-val" style="text-align: right; color: #38bdf8; font-weight: bold; font-size: 1.5rem;">
+                        Loading...
+                    </div>
+                </div>
+                
+                <div style="position: relative; height: 300px; width: 100%;">
+                    <canvas id="flowChart"></canvas>
                 </div>
             </div>
         </div>
 
-        <!--Spacer-->
-        <div class=spacer></div>
-
-        <!--Berkeley-->
-        <div class=berkeley>
-            <div class=berkeley-text>
-                <div class=text-area>
-                    <h1 class=head-one>BERKELEY, CA</h1>
-                    <p> In 2019, I obtained an M.S. in civil and environmental
-                        engineering from UC Berkeley. The Bay treated me well
-                        and sent me on my current trajectory into environmental
-                        fluid mechanics and hydrology. I also had a wonderful
-                        cat named Maraschino!</p>
+        <div class="timeline-container">
+            
+            <div class="timeline-entry">
+                <div class="timeline-img">
+                    <img src="images/ithaca_tree.jpeg" alt="Ithaca Scenery">
+                </div>
+                <div class="timeline-text">
+                    <h2>Ithaca, NY <span class="year">2020-2025</span></h2>
+                    <p>Ph.D. from <strong>Cornell University</strong> in Civil & Environmental Engineering. My research focused on physical hydrology, specifically flood interaction and land surface parameterization.</p>
                 </div>
             </div>
-        </div>
 
-        <!--Spacer-->
-        <div class=spacer></div>
-
-        <!--Buffalo-->
-        <div class=buffalo>
-            <div class=buffalo-text>
-                <div class=text-area>
-                    <h1 class=head-one>BUFFALO, NY</h1>
-                    <p>I received my B.S. in civil and environmental
-                        engineering at the University at Buffalo in 2018.
-                        This is where I cut my teeth with research, focusing on
-                        disinfection byproducts from the chlorination of
-                        algae.</p>
+            <div class="timeline-entry">
+                <div class="timeline-img">
+                    <img src="images/campanile_scape.jpeg" alt="Berkeley Campanile">
+                </div>
+                <div class="timeline-text">
+                    <h2>Berkeley, CA <span class="year">2019</span></h2>
+                    <p>M.S. in Civil & Environmental Engineering from <strong>UC Berkeley</strong>. The Bay Area sent me on my current trajectory into environmental fluid mechanics and hydrology.</p>
                 </div>
             </div>
+
+            <div class="timeline-entry">
+                <div class="timeline-img">
+                    <img src="images/niagara.jpg" alt="Niagara Falls">
+                </div>
+                <div class="timeline-text">
+                    <h2>Buffalo, NY <span class="year">2018</span></h2>
+                    <p>B.S. in Civil & Environmental Engineering at the <strong>University at Buffalo</strong>. This is where I cut my teeth with research, focusing on disinfection byproducts from algae chlorination.</p>
+                </div>
+            </div>
+
         </div>
+    </div>
 
+    <footer>
+        <p>&copy; 2024 Alex Young. Designed in Ithaca.</p>
+    </footer>
 
-    </body>
+<script src="scripts/stream_widget.js"></script>
+</body>
 </html>

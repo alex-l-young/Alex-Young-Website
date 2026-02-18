@@ -1,0 +1,439 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+:root {
+    /* MODERN DARK PALETTE */
+    --bg-body: #0f172a;       /* Deep Navy/Slate */
+    --bg-card: #1e293b;       /* Lighter Slate for elements */
+    --bg-nav: rgba(15, 23, 42, 0.85); /* Translucent */
+    
+    --text-main: #f8fafc;     /* Almost White */
+    --text-muted: #94a3b8;    /* Muted Blue-Grey */
+    
+    --accent: #38bdf8;        /* Electric Sky Blue */
+    --accent-glow: rgba(56, 189, 248, 0.3);
+    
+    --border: 1px solid #334155;
+    --radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+/* RESET */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+h1, h2, h3 {
+    color: var(--text-main);
+    font-weight: 800; /* Extra Bold Headers */
+    letter-spacing: -0.5px; /* Tight tracking for modern look */
+    margin-bottom: 0.5em;
+}
+
+a { 
+    text-decoration: none; 
+    color: inherit; 
+    transition: var(--transition); 
+}
+
+img { 
+    max-width: 100%; 
+    display: block; 
+    border-radius: var(--radius); 
+}
+
+/* GLASSMORPHISM NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg-nav);
+    backdrop-filter: blur(10px); /* The "Frosted Glass" effect */
+    border-bottom: var(--border);
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--text-main);
+    letter-spacing: -1px;
+}
+
+.logo span { color: var(--accent); } /* Color the dot or last name */
+
+.logo a {
+    color: var(--text-main); /* Ensures it stays white/grey by default */
+    transition: var(--transition);
+}
+
+.logo a:hover {
+    color: var(--accent); /* Lights up Electric Blue on hover */
+}
+
+.nav-links { list-style: none; display: flex; gap: 2rem; }
+
+.nav-links a {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent);
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* SIDE-BY-SIDE HERO SECTION */
+.hero {
+    display: flex;
+    flex-direction: row; /* Side by side */
+    align-items: center; /* Vertically center image with text */
+    justify-content: center;
+    gap: 4rem; /* Space between photo and text */
+    padding: 6rem 0 4rem 0;
+    text-align: left; /* Text aligns left */
+    animation: fadeIn 1s ease-in;
+    border-bottom: 1px solid var(--bg-card);
+    margin-bottom: 4rem;
+    max-width: 1000px; /* Constrain width so they stay close */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-image {
+    flex-shrink: 0; /* Prevents image from squishing */
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--bg-card);
+    box-shadow: 0 0 60px var(--accent-glow);
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    background: linear-gradient(to bottom right, var(--text-main), var(--text-muted));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Utility to remove gap between Hero and Widget */
+.hero.no-bottom-gap {
+    margin-bottom: 0 !important;
+    padding-bottom: 2rem !important; /* Keep a little breathing room */
+    border-bottom: none !important; /* Remove the line separator if you want them to blend */
+}
+
+.container.no-top-gap {
+    padding-top: 0 !important;
+}
+
+/* RESPONSIVE ADJUSTMENT */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 1rem; }
+    
+    .hero {
+        flex-direction: column; /* Stack vertically on phone */
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-image {
+        order: -1; /* Forces image to top on mobile */
+    }
+
+    .hero-text h1 { font-size: 2.5rem; }
+    
+    .timeline-entry {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+    
+    .timeline-img { height: 200px; }
+}
+
+/* NEW TIMELINE LAYOUT (Replaces Location-Section) */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem; /* Space between entries */
+    max-width: 900px; /* Constrain width for readability */
+    margin: 0 auto;
+}
+
+.timeline-entry {
+    display: grid;
+    grid-template-columns: 2fr 3fr; /* 40% Image, 60% Text */
+    gap: 3rem;
+    align-items: center;
+    background: var(--bg-card); /* Card background for the whole entry */
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.timeline-entry:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
+}
+
+.timeline-img {
+    height: 250px; /* Fixed height for consistency */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.timeline-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.timeline-entry:hover .timeline-img img {
+    transform: scale(1.05);
+}
+
+.timeline-text h2 {
+    font-size: 1.8rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.timeline-text .year {
+    font-size: 0.9rem;
+    background: rgba(56, 189, 248, 0.1); /* Low opacity accent */
+    color: var(--accent);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+.timeline-text p {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-text h1 { font-size: 2.8rem; }
+    
+    .timeline-entry {
+        grid-template-columns: 1fr; /* Stack image on top of text */
+        gap: 1.5rem;
+        text-align: left;
+    }
+    
+    .timeline-img {
+        height: 200px; /* Shorter on mobile */
+    }
+}
+
+/* GRID & CARDS */
+.page-header { text-align: center; margin-bottom: 4rem; }
+.page-header h1 { font-size: 3rem; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--bg-card);
+    border: var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent); /* Light up border on hover */
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+}
+
+.card-image { height: 200px; overflow: hidden; }
+.card-image img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 0; /* Override default radius inside card */
+}
+
+.card:hover .card-image img { transform: scale(1.05); }
+
+.card-content { padding: 1.5rem; }
+.card-content h2 { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-main); }
+.card-content p { font-size: 0.95rem; }
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 3rem;
+    margin-top: 4rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: var(--border);
+}
+
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 1rem; }
+    .hero, .location-section, .location-section:nth-child(even) {
+        flex-direction: column;
+        text-align: center; /* Center text on mobile */
+    }
+    .loc-text h2 { justify-content: center; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* PROJECT PAGE UTILITIES */
+.project-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+.project-content p {
+    margin-bottom: 1.5rem;
+}
+
+.project-content b {
+    color: var(--text-main);
+}
+
+/* Styled Button Links */
+.btn-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: var(--radius);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-link:hover {
+    background: var(--accent);
+    color: var(--bg-body); /* Dark text on bright button */
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* Center the P5.js Canvas */
+#simulation {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+canvas {
+    display: block; /* Removes bottom scrollbar on canvas */
+}
+
+/* --- SCIENTIFIC PLOT STYLES --- */
+.graph-grid {
+    display: grid;
+    /* 2 columns for better visibility of data */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.graph-card {
+    background: var(--bg-card);
+    border: var(--border);
+    border-radius: var(--radius);
+    padding: 1rem; /* Padding acts like a matte/frame */
+    transition: var(--transition);
+}
+
+.graph-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.graph-card img {
+    width: 100%;
+    height: auto; /* CRITICAL: prevents clipping */
+    object-fit: contain;
+    border-radius: 4px; /* Slight round on the image itself */
+}
+
+/* --- INTERACTIVE SIMULATION STAGE --- */
+.simulation-stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Essential for the slider positioning */
+    
+    /* The "Screen" Look */
+    background-color: #000000;
+    border: 1px solid #334155;
+    border-radius: var(--radius);
+    padding: 1rem;
+    
+    /* LAYOUT FIX: Stop collapsing! */
+    width: 100%;           /* Take up full width of the container */
+    max-width: 900px;      /* But don't get wider than this */
+    height: 550px;         /* Give it a fixed height so it doesn't jump */
+    
+    margin: 2rem auto;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    overflow: hidden;      /* Keeps everything contained */
+}
+
+.simulation-stage canvas {
+    display: block;
+    /* Ensure canvas doesn't overflow */
+    max-width: 100%;
+    max-height: 100%; 
+}
+
+@media (max-width: 768px) {
+    .graph-grid {
+        grid-template-columns: 1fr; /* Stack graphs on mobile */
+    }
+}

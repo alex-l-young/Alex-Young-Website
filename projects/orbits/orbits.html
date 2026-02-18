@@ -1,30 +1,43 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Alex Young</title>
-        <link href="orbits_style.css" type="text/css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbits | Alex Young</title>
+    <link href="../../stylesheets/style.css" type="text/css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+</head>
+<body>
 
-    <body>
-        <div class=topnav>
-            <div id=name>
-                <h1>ALEX YOUNG</h1>
-            </div>
-            <div id=links>
-                <ul>
-                    <li><a href="../../photography.html">PHOTOGRAPHY</a></li>
-                    <li><a href="../../projects.html">PROJECTS</a></li>
-                    <li><a href="../../index.html">ABOUT</a></li>
-                </ul>
-            </div>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../../index.html">ALEX YOUNG<span>.</span></a>
         </div>
+        <ul class="nav-links">
+            <li><a href="../../index.html">About</a></li>
+            <li><a href="../../projects.html">Projects</a></li>
+            <li><a href="../../photography.html">Photography</a></li>
+        </ul>
+    </nav>
 
-        <!--Main Content-->
-        <div class=title>
+    <div class="container">
+        <div class="page-header">
             <h1>Orbits</h1>
+            <p>Gravitational physics simulation.</p>
         </div>
-        <script src="orbits.js"></script>
 
-    </body>
+        <div class="project-content" style="text-align: center;">
+            <p>A visualization of orbital mechanics using numerical integration.</p>
+        </div>
+
+        <div class="simulation-stage">
+            <script src="orbits.js"></script>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Alex Young.</p>
+    </footer>
+
+</body>
 </html>

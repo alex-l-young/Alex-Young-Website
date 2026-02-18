@@ -1,43 +1,41 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Alex Young</title>
-        <link href="smoke_style.css" type="text/css" rel="stylesheet">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildfire Smoke | Alex Young</title>
+    <link href="../../stylesheets/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
 
-    <body>
-        <div class=topnav>
-            <div id=name>
-                <h1>ALEX YOUNG</h1>
-            </div>
-            <div id=links>
-                <ul>
-                    <li><a href="../../photography.html">PHOTOGRAPHY</a></li>
-                    <li><a href="../../projects.html">PROJECTS</a></li>
-                    <li><a href="../../index.html">ABOUT</a></li>
-                </ul>
-            </div>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../../index.html">ALEX YOUNG<span>.</span></a>
         </div>
+        <ul class="nav-links">
+            <li><a href="../../index.html">About</a></li>
+            <li><a href="../../projects.html">Projects</a></li>
+            <li><a href="../../photography.html">Photography</a></li>
+        </ul>
+    </nav>
 
-        <!--Main Content-->
-        <div class=title>
+    <div class="container">
+        <div class="page-header">
             <h1>Wildfire Model Validation</h1>
+            <p>Camp Fire (2018) Smoke Analysis</p>
         </div>
 
-        <div class=header-img>
-            <img src="smoky_day.jpeg" alt="Smoke Plume Plots"  width=100%>
-        </div>
+        <div class="project-content">
+            <img src="smoky_day.jpeg" alt="Smoky Day in SF" style="width: 100%; margin-bottom: 2rem;">
 
-        <div class=text-container>
             <p>
-                During my M.S. at UC Berkeley in 2018-2019, the Camp Fire that
+                During my M.S. at UC Berkeley in 2018-2019, the <b>Camp Fire</b> that
                 destroyed Paradise, CA resulted in a pall of smoke that lingered
                 over the Bay Area for almost 2 weeks. As someone from the East
                 Coast, I was astonished by the scale and impact of the smoke. We
                 wore N95 masks for the majority of the event (an unusual accessory
                 prior to the pandemic), and tried to avoid exerting ourselves
-                outdoors. At night, shining a flashlight would illuminate the
-                smoke particles suspended in the air like a bad crime drama.
+                outdoors.
             </p>
             <p>
                 After the Camp Fire, I helped work on a scientific publication
@@ -46,13 +44,21 @@
                 model. This model is a coupling of the Weather Research and
                 Forecasting model (WRF) with a smoke plume model that uses
                 satellite observations of fire radiative power to estimate the
-                smoke output. Then the plume is transported with the prevailing
-                winds and atmospheric conditions.
+                smoke output.
             </p>
-            <a href="https://journals.ametsoc.org/view/journals/bams/103/6/BAMS-D-20-0329.1.xml">
-                <h1 id=paper-link>Read the paper HERE</h1>
+
+            <a href="https://journals.ametsoc.org/view/journals/bams/103/6/BAMS-D-20-0329.1.xml" 
+                class="btn-link"
+                target="_blank" 
+                rel="noopener noreferrer">
+                Read the Paper
             </a>
         </div>
+    </div>
 
-    </body>
+    <footer>
+        <p>&copy; 2024 Alex Young.</p>
+    </footer>
+
+</body>
 </html>

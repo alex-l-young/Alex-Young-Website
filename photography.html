@@ -1,39 +1,62 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Alex Young</title>
-        <link href="stylesheets/photography_style.css" type="text/css" rel="stylesheet">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography | Alex Young</title>
+    <link href="stylesheets/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
 
-    <body>
-        <div class=topnav>
-            <div id=name>
-                <h1>ALEX YOUNG</h1>
-            </div>
-            <div id=links>
-                <ul>
-                    <li><a href="photography.html">PHOTOGRAPHY</a></li>
-                    <li><a href="projects.html">PROJECTS</a></li>
-                    <li><a href="index.html">ABOUT</a></li>
-                </ul>
-            </div>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">ALEX YOUNG<span>.</span></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="photography.html" class="active">Photography</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Photography</h1>
+            <p>Captured moments from the field.</p>
         </div>
 
-    <!--Main Content-->
-    <div class=row>
-        <div class=column>
-            <img src="photos/el_cap.jpg" alt="El Capitan" style="width:100%">
-            <h2>West Coast</h2>
-        </div>
-        <div class=column>
-            <img src="photos/horseshoe_falls.jpg" alt="El Capitan" style="width:100%">
-            <h2>East Coast</h2>
-        </div>
-        <div class=column>
-            <img src="photos/macro.jpg" alt="El Capitan" style="width:100%">
-            <h2>Macro</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-image">
+                    <img src="photos/el_cap.jpg" alt="West Coast">
+                </div>
+                <div class="card-content">
+                    <h2>West Coast</h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="photos/horseshoe_falls.jpg" alt="East Coast">
+                </div>
+                <div class="card-content">
+                    <h2>East Coast</h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="photos/macro.jpg" alt="Macro">
+                </div>
+                <div class="card-content">
+                    <h2>Macro</h2>
+                </div>
+            </div>
         </div>
     </div>
 
-    </body>
+    <footer>
+        <p>&copy; 2024 Alex Young.</p>
+    </footer>
+</body>
 </html>

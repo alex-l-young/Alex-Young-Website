@@ -1,42 +1,43 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Alex Young</title>
-        <link href="fluid_sim_style.css" type="text/css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncy Balls | Alex Young</title>
+    <link href="../../stylesheets/style.css" type="text/css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+</head>
+<body>
 
-    <body>
-        <div class=topnav>
-            <div id=name>
-                <h1>ALEX YOUNG</h1>
-            </div>
-            <div id=links>
-                <ul>
-                    <li><a href="../../photography.html">PHOTOGRAPHY</a></li>
-                    <li><a href="../../projects.html">PROJECTS</a></li>
-                    <li><a href="../../index.html">ABOUT</a></li>
-                </ul>
-            </div>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../../index.html">ALEX YOUNG<span>.</span></a>
         </div>
+        <ul class="nav-links">
+            <li><a href="../../index.html">About</a></li>
+            <li><a href="../../projects.html">Projects</a></li>
+            <li><a href="../../photography.html">Photography</a></li>
+        </ul>
+    </nav>
 
-        <!--Main Content-->
-        <div class=title>
+    <div class="container">
+        <div class="page-header">
             <h1>Bouncy Balls</h1>
+            <p>A p5.js physics experiment.</p>
         </div>
 
-        <div class=text-container>
-            <p>I've been fascinated with the power of p5.js as of late. It's a
-            neat little package that allows you to draw and move shapes in an
-            animated way. As far as limitations, it seems like the ceiling is
-            my own creativity and ability to code up the numerical physics
-            implementations. My end goal is to eventually put together a little
-            interactive flood simulation, but for now, enjoy the bouncy balls.</p>
+        <div class="project-content" style="text-align: center;">
+            <p>Enjoy the bouncing balls. The slider controls gravity.</p>
         </div>
 
-        <div id=#simulation>
+        <div class="simulation-stage">
             <script src="fluid_sim.js"></script>
         </div>
+    </div>
 
-    </body>
+    <footer>
+        <p>&copy; 2024 Alex Young.</p>
+    </footer>
+
+</body>
 </html>
